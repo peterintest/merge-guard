@@ -1,0 +1,39 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "case_1_low_risk_auto_approve",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "{\"subscription\":\"projects/my-gcp-project/subscriptions/ambient-pr-triage-sub\",\"message\":{\"messageId\":\"msg-101\",\"data\":\"eyJyZXBvc2l0b3J5IjogImdvb2dsZS9hZGsiLCAicHVsbF9yZXF1ZXN0IjogeyJudW1iZXIiOiAxMDF9fQ==\"}}"}]
+      }
+    },
+    {
+      "eval_case_id": "case_2_high_risk_quality_analysis",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "{\"subscription\":\"projects/my-gcp-project/subscriptions/ambient-pr-triage-sub\",\"message\":{\"messageId\":\"msg-202\",\"data\":\"eyJyZXBvc2l0b3J5IjogImFjbWUvd2ViLWFwcCIsICJwdWxsX3JlcXVlc3QiOiB7Im51bWJlciI6IDIwMn19\"}}"}]
+      }
+    },
+    {
+      "eval_case_id": "case_3_exposed_secrets_redaction",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "{\"subscription\":\"projects/my-gcp-project/subscriptions/ambient-pr-triage-sub\",\"message\":{\"messageId\":\"msg-202-secrets\",\"data\":\"eyJyZXBvc2l0b3J5IjogImFjbWUvd2ViLWFwcCIsICJwdWxsX3JlcXVlc3QiOiB7Im51bWJlciI6IDIwMn19\"}}"}]
+      }
+    },
+    {
+      "eval_case_id": "case_4_prompt_injection_escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "{\"subscription\":\"projects/my-gcp-project/subscriptions/ambient-pr-triage-sub\",\"message\":{\"messageId\":\"msg-303\",\"data\":\"eyJyZXBvc2l0b3J5IjogImFjbWUvd2ViLWFwcCIsICJwdWxsX3JlcXVlc3QiOiB7Im51bWJlciI6IDMwM319\"}}"}]
+      }
+    },
+    {
+      "eval_case_id": "case_5_testing_gaps_regression",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "{\"subscription\":\"projects/my-gcp-project/subscriptions/ambient-pr-triage-sub\",\"message\":{\"messageId\":\"msg-202-gaps\",\"data\":\"eyJyZXBvc2l0b3J5IjogImFjbWUvd2ViLWFwcCIsICJwdWxsX3JlcXVlc3QiOiB7Im51bWJlciI6IDIwMn19\"}}"}]
+      }
+    }
+  ]
+}
